@@ -1,4 +1,24 @@
-# 🐍 Flutter Snake Game
+<pre style="background: transparent; color: #fff; font-family: monospace;">
+<code>
+                      .-:-
+    p,._          ..::. .:
+  ,’?S$$$SS?I?ª’‛j,,._  ··             .--.--.                                ,-.           
+ jL‛dilb?L_,dk 〤 SI$S?:·             /  /    '.                          ,--/ /|           
+ ?7ª⁰^"ª?$pSI$k¬d?S$7Ii: ·           |  :  /`. /      ,---,             ,--. :/ |           
+ `´j7     ¨^ª?$$SiISIi?:             ;  |  |--`   ,-+-. /  |            :  : ' /            
+   ?      ?’    ¨`⁰ªº:i’ ·           |  :  ;_    ,--.'|'   |  ,--.--.   |  '  /      ,---.
+   ‛      ‛      ·:;i7’               \  \    `.|   |  ,"' | /       \  '  |  :     /     \
+     i·         ·:d$⁰    ·             `----.   \   | /  | |.--.  .-. | |  |   \   /    /  |
+     S    .    ,d7’   ·:.j             __ \  \  |   | |  | | \__\/: . . '  : |. \ .    ' / |
+    ·$   / ··.j7’   ·:iS7i            /  /`--'  /   | |  |/  ," .--.; | |  | ' \ \'   ;   /|
+    :i ,⁰ · ,?’   ··:?’j$·           '--'.     /|   | |--'  /  /  ,.  | '  : |--' '   |  / |
+     ⁰/..¬p?’   ·:‛i7‛?’jk             `--'---' |   |/     ;  :   .'   \;  |,'    |   :    |
+     ’ ¨^‛    .·:i’4ツ.∫k‛?                     '---'      |  ,     .-./'--'       \   \   /
+    ’        · ·:S:j?’‛?⌀‛                                  `--`---'                 `----'
+ ⋆·’:       ·;·i ?i $7‛$7‛
+</code>
+</pre>
+
 Proyecto desarrollado en **Flutter** en equipo, cuyo objetivo es crear el clásico juego **Snake** como aplicación multiplataforma (Android / iOS).
 Este proyecto forma parte de un trabajo académico y sirve como introducción práctica al desarrollo de aplicaciones híbridas con Flutter.
 
