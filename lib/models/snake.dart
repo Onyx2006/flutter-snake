@@ -1,8 +1,5 @@
 import 'dart:math';
-
-enum Direction {
-  up, down, left, right,
-}
+import 'direction.dart';
 
 // En dart no existe public, private, protected como en java
 // Todo por defecto es public, y si quiero algo private se añade _ al nombre de la método/funcion/propiedad
