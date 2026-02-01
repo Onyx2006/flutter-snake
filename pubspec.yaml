@@ -54,7 +54,7 @@ flutter:
   assets:
     - assets/images/snake_head.png
     - assets/images/snake_body.png
-    - assets/images/manzana.png
+    - assets/images/apple.png
     - assets/images/tile1.png
     - assets/images/tile2.png
     - assets/sounds/eat.wav
