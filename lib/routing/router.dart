@@ -3,6 +3,7 @@ import 'package:go_router/go_router.dart';
 import 'routes.dart';
 import '../screens/game_screen.dart';
 import '../screens/game_over_screen.dart';
+import '../screens/home_screen.dart';
 
 class AppRouter {
   static final router = GoRouter(
@@ -11,7 +12,7 @@ class AppRouter {
       GoRoute(
         path: Routes.home,
         builder: (context, state) {
-          return const GameOverScreen(); // Change this to Home/Menu screen
+          return const HomeScreen();
         },
       ),
       GoRoute(
