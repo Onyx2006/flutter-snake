@@ -3,7 +3,7 @@ import 'package:go_router/go_router.dart';
 
 import '../routing/routes.dart';
 import '../widgets/bar.dart';
-import '../widgets/retry_button.dart';
+import '../widgets/start_button.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -41,7 +41,7 @@ class HomeScreen extends StatelessWidget {
               style: TextStyle(fontSize: subtitleSize),
             ),
             const SizedBox(height: 40),
-            RetryButton(
+            StartButton(
               onPressed: () {
                 context.go(Routes.game);
               },
