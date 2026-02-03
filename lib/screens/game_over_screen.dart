@@ -6,12 +6,12 @@ import '../widgets/bar.dart';
 import '../widgets/retry_button.dart';
 
 class GameOverScreen extends StatelessWidget {
-  const GameOverScreen({super.key});
+  final int score;
+  const GameOverScreen({super.key, required this.score});
 
   @override
   Widget build(BuildContext context) {
     const String appTitle = 'Game Over';
-    const int score = 12;
 
     final isDesktop = MediaQuery.of(context).size.width > 600;
     final fontSize = isDesktop ? 30.0 : 24.0;
