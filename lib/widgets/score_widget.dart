@@ -10,10 +10,7 @@ class ScoreWidget extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Positioned(
-      top: 20,
-      right: 20,
-      child: Container(
+    return Container(
         padding: const EdgeInsets.all(8),
         decoration: BoxDecoration(
           color: Colors.black.withValues(alpha: 0.5),
@@ -27,7 +24,6 @@ class ScoreWidget extends StatelessWidget {
             fontWeight: FontWeight.bold,
           ),
         ),
-      ),
-    );
+      );
   }
 }
