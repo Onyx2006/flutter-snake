@@ -24,7 +24,8 @@ class AppRouter {
       GoRoute(
         path: Routes.gameOver,
         builder: (context, state) {
-          return const GameOverScreen();
+          final score = state.extra as int? ?? 0;
+          return GameOverScreen(score: score);
         },
       ),
     ],

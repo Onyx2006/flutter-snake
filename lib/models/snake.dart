@@ -8,16 +8,12 @@ class Snake {
   List<Point<int>> body;
   Direction direction;
 
-  Snake({
-    required this.body,
-    required this.direction,
-  });
+  Snake({required this.body, required this.direction});
 
   Point<int> get head => body.first;
 
-
   void move({bool grow = false}) {
-    final newHead = _getNextHeadPosition();
+    final newHead = nextHead();
 
     body.insert(0, newHead);
 
@@ -26,9 +22,8 @@ class Snake {
     }
   }
 
-
   /// Calcula la siguiente posición de la cabeza
-  Point<int> _getNextHeadPosition() {
+  Point<int> nextHead() {
     switch (direction) {
       case Direction.up:
         return Point(head.x, head.y - 1);
@@ -41,33 +36,32 @@ class Snake {
     }
   }
 
-  
-
   // Colision
   bool hitsWall(int boardWidth, int boardHeight) {
-    return head.x < 0 || head.y < 0 || head.x >= boardWidth || head.y >= boardHeight;
+    return head.x < 0 ||
+        head.y < 0 ||
+        head.x >= boardWidth ||
+        head.y >= boardHeight;
   }
 
   bool hitsItself() {
     final headPosition = head;
     return body.skip(1).any((segment) => segment == headPosition);
-    
+
     // En java lo haría asi pero en dart se ve más sencillo con methodos:
     // for (int i = 1; i < body.size(); i++) {
-      // if (body.get(i).equals(headPosition)) {
-        // return true;
-      // }
+    // if (body.get(i).equals(headPosition)) {
+    // return true;
+    // }
     // }
     // return false;
   }
 
-  
   // Evito que se pueda hacer esto: "-> <-" o "arriba abajo"
   void changeDirection(Direction newDirection) {
     if (_isOppositeDirection(newDirection)) return;
     direction = newDirection;
   }
-
 
   bool _isOppositeDirection(Direction newDirection) {
     return (direction == Direction.up && newDirection == Direction.down) ||
