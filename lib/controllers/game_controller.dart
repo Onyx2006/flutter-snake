@@ -2,11 +2,13 @@ import 'dart:async';
 import 'dart:math';
 
 import 'package:flutter/material.dart';
+import 'package:audioplayers/audioplayers.dart';
 
 import '../models/direction.dart';
 import '../models/food.dart';
 import '../models/snake.dart';
 
+// TODO(srvariable): Refactor audio handling, it might have some leaks, because I don't call dispose
 class GameController extends ChangeNotifier {
   static const int rows = 10;
   static const int cols = 10;
@@ -14,7 +16,7 @@ class GameController extends ChangeNotifier {
 
   late Snake _snake;
   late Food _food;
-    Timer? _timer;
+  Timer? _timer;
 
   int _score = 0;
   bool _gameOver = false;
@@ -36,10 +38,7 @@ class GameController extends ChangeNotifier {
 
     final head = Point<int>(cols ~/ 2, rows ~/ 2);
     _snake = Snake(
-      body: <Point<int>>[
-        head,
-        Point<int>(head.x - 1, head.y),
-      ],
+      body: <Point<int>>[head, Point<int>(head.x - 1, head.y)],
       direction: Direction.right,
     );
 
@@ -67,11 +66,14 @@ class GameController extends ChangeNotifier {
       _timer?.cancel();
       _gameOver = true;
 
+      AudioPlayer().play(AssetSource('sounds/game_over.wav'));
       notifyListeners();
       return;
-      }
+    }
 
     if (willEat) {
+      AudioPlayer().play(AssetSource('sounds/eat.wav'));
+
       _score += 1;
       _food.eaten(_snake.body);
     }
