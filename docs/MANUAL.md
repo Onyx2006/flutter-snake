@@ -19,32 +19,32 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install -y curl git unzip xz-utils zip libglu1-mesa
 ```
 
-![][./images/image1.png]
+![](./images/image1.png)
 
 Cuando termine, abrimos el **V**isual **S**tudio **C**ode (es el que recomienda)
 e instalamos la extensión de Flutter.
 
-![][./images/image2.png]
+![](./images/image2.png)
 
 Una vez instalado, pulsamos <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>
 para abrir la paleta de comandos de VSC, escribimos **`flutter`** y
 seleccionamos **`New project`**.
 
-![][./images/image3.png]
+![](./images/image3.png)
 
 En la esquina inferior derecha puede que salga un error porque no tenemos el
 SDK instalado, lo instalamos.
 
-![][./images/image4.png]
+![](./images/image4.png)
 
 Cuando termine reiniciamos VSC y al crear un nuevo proyecto, esta vez saldrán
 diferentes templates. Partiremos de **`Application`**.
 
-![][./images/image5.png]
+![](./images/image5.png)
 
 Y nos creará la siguiente estructura:
 
-![][./images/image6.png]
+![](./images/image6.png)
 
 ## Desarrollo
 
@@ -120,15 +120,15 @@ class _MyHomePageState extends State<MyHomePage> {
 Si ejecutamos en la terminal `flutter run -d web-server --web-port 9876`,
 abrirá un servidor en el puerto 9876.
 
-![][./images/image7.png]
+![](./images/image7.png)
 
 Si accedemos, veremos lo siguiente
 
-![][./images/image8.png]
+![](./images/image8.png)
 
 Al darle al botón *+* en la esquina inferior derecha, se aumentará el contador
 
-![][./images/image9.png]
+![](./images/image9.png)
 
 Si queremos que se reduzca, podemos o bien crear un botón nuevo y la función
 respectiva para reducir el contador, o la vía fácil, en lugar de que
@@ -145,11 +145,11 @@ incrementar aumente el contador, que lo reduzca.
 En la terminal, pulsamos la tecla **r** para hacer un *hot-reload*, básicamente
 que se apliquen los cambios hechos sin tener que reiniciar el servidor
 
-![][./images/image10.png]
+![](./images/image10.png)
 
 Y ahora el botón reducirá el contador
 
-![][./images/image11.png]
+![](./images/image11.png)
 
 Pero es un poco contraintuitivo que un botón que pone *+* reduzca el contador,
 así que también usaremos la otra vía, crear un nuevo botón, para ello, creamos
@@ -186,7 +186,7 @@ en este caso el de *decrement* y el de *increment*
 Si hacemos un hot-reload, pulsando la **r** en la terminal, veremos que en la
 página están los nuevos botones
 
-![][./images/image12.png]
+![](./images/image12.png)
 
 El código final sería el siguiente:
 
@@ -288,18 +288,18 @@ class _MyHomePageState extends State<MyHomePage> {
 Para buildear en Android, tenemos que ejecutar el comando **flutter build apk**,
 pero seguramente salga este error porque no tenemos el SDK de Android.
 
-![][./images/image13.png]
+![](./images/image13.png)
 
 Para solucionarlo lo descargamos. La forma fácil es descargando **Android Studio**,
 que incluye todo lo necesario. Pero lo haremos con comandos pues ocupa menos
 espacio, para ello descargamos el SDK del siguiente
 [enlace](https://developer.android.com/studio#command-line-tools-only)
 
-![][./images/image14.png]
+![](./images/image14.png)
 
 También necesitaremos las platform-tools, que obtendremos del siguiente
 [enlace](https://developer.android.com/tools/releases/platform-tools?hl=en#downloads) 
-![][./images/image15.png]
+![](./images/image15.png)
 
 Una vez descargados, los descomprimimos, en este caso con:
 
@@ -318,7 +318,7 @@ echo ANDROID_HOME=$PWD | tee -a $HOME/.bashrc # (suponiendo que se utilice bash)
 >
 > Especificar la flag **`-a`** al comando **tee** o *sobreescribirá* el archivo **.bashrc**
 >
-> **![][./images/image16.png]**
+> **![](./images/image16.png)**
 
 Luego ejecutaremos el comando:
 
@@ -328,7 +328,7 @@ Luego ejecutaremos el comando:
 
 Pedirá aceptar una licencia, escribimos **y**
 
-**![][./images/image17]![][image18.png]**
+**![](./images/image17]![][image18.png)**
 
 Y en VSC hacemos
 
@@ -336,11 +336,11 @@ Y en VSC hacemos
 flutter config –android-sdk $HOME/Downloads/android_sdk
 ```
 
-![][./images/image19.png]
+![](./images/image19.png)
 
 Luego ejecutamos **flutter doctor --android-licenses** y si da el siguiente error
 
-![][./images/image20.png]
+![](./images/image20.png)
 
 Movemos el contenido de *cmdline-tools* a una carpeta *latest*
 
@@ -350,19 +350,19 @@ mkdir latest
 mv * latest
 ```
 
-**![][./images/image21.png]**
+**![](./images/image21.png)**
 
 Y volvemos a probar, deberían salir muchas licencias a aceptar, escribimos **y** en cada petición
 
-![][./images/image22.png]
+![](./images/image22.png)
 
 Ahora haremos **flutter build apk** y si da el siguiente error
 
-![][./images/image23.png]
+![](./images/image23.png)
 
 Instalamos el paquete necesario
 
-![][./images/image24.png]
+![](./images/image24.png)
 
 Y volvemos a ejecutar el comando
 
@@ -381,7 +381,7 @@ sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get install -y clang cmake ninja-build pkg-config libgtk-3-dev libstdc++-12-dev
 ```
 
-![][./images/image25.png]
+![](./images/image25.png)
 
 Y ejecutar:
 
@@ -389,4 +389,4 @@ Y ejecutar:
 flutter build linux
 ```
 
-![][./images/image26.png]
+![](./images/image26.png)
